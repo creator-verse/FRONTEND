@@ -1,0 +1,158 @@
+.footer {
+    background: #111;
+    color: white;
+    padding: 6rem 0 2rem;
+    position: relative;
+    margin-top: -80px;
+    /* Pull up behind newsletter if needed, or adjust based on layout */
+    padding-top: 100px;
+    /* Space for the border */
+    /* Angle matching design more closely */
+    clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+    border-top: 15px solid #00cc66;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.linksGrid {
+    display: flex;
+    gap: 8rem;
+}
+
+.linkColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.linkColumn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-family: var(--font-inter);
+}
+
+.linkColumn a:hover {
+    opacity: 1;
+}
+
+
+
+.buyTicketsBtn {
+    background: #ff3399;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 99px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-inter);
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+
+.buyTicketsBtn:hover {
+    background: #e62e8a;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.bigLogo {
+    font-family: var(--font-outfit);
+    font-size: 5rem;
+    /* Smaller than Schedule but big */
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: white;
+    margin: 0;
+}
+
+.footerInfo {
+    display: flex;
+    align-items: flex-end;
+    /* Align bottom */
+    gap: 4rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-bottom: 5px;
+    /* Align with social icons */
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.followUs {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.icons svg {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icons svg:hover {
+    color: #ff3399;
+}
+
+@media (max-width: 900px) {
+    .linksGrid {
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .bigLogo {
+        font-size: 3rem;
+    }
+
+    .footerInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,125 @@
+.section {
+    padding: 1rem 0 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #0d0d0d;
+    /* Very dark gray/black */
+    border-radius: 40px;
+    width: 98%;
+    /* Span screen width */
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    max-width: 1200px;
+    line-height: 1.3;
+    z-index: 10;
+    font-family: var(--font-outfit);
+}
+
+.shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.purpleBlob {
+    top: 30%;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    color: #5856d6;
+    transform: rotate(15deg);
+}
+
+.greenStar {
+    bottom: 15%;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    color: #00ba70;
+    animation: spin 20s linear infinite;
+}
+
+.redCloud {
+    top: 15%;
+    right: 15%;
+    width: 250px;
+    height: 180px;
+    color: #e61d5f;
+    transform: rotate(-10deg);
+}
+
+.pinkDiamond {
+    bottom: 20%;
+    right: 20%;
+    width: 180px;
+    height: 180px;
+    color: #ff3399;
+    transform: rotate(20deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .card {
+        min-height: 60vh;
+        padding: 2rem;
+    }
+
+    .text {
+        font-size: 2rem;
+    }
+
+    .shape {
+        opacity: 0.5;
+        /* Fade decoration a bit on smaller screens if overlapping */
+    }
+
+    .purpleBlob {
+        width: 120px;
+        height: 120px;
+        left: 5%;
+    }
+
+    .greenStar {
+        width: 100px;
+        height: 100px;
+        left: 15%;
+    }
+
+    .redCloud {
+        width: 150px;
+        height: 110px;
+        right: 5%;
+    }
+
+    .pinkDiamond {
+        width: 100px;
+        height: 100px;
+        right: 10%;
+    }
+}

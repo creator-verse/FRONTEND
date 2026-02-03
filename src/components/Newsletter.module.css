@@ -1,0 +1,211 @@
+﻿/* Mobile First Defaults */
+.section {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.newsletterBox {
+    background-color: #0d0d0d;
+    /* Deep black */
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+    min-height: 550px;
+    justify-content: center;
+    /* Noise texture */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* Blobs */
+.blob1 {
+    position: absolute;
+    top: -5%;
+    left: 10%;
+    width: 350px;
+    height: 350px;
+    background: #ff3399;
+    /* Pink */
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    z-index: 1;
+    transform: rotate(-10deg);
+}
+
+.blob2 {
+    position: absolute;
+    bottom: -15%;
+    right: 30%;
+    width: 500px;
+    height: 500px;
+    background: #e61d5f;
+    /* Reddish */
+    border-radius: 65% 35% 26% 74% / 54% 30% 70% 46%;
+    z-index: 1;
+    transform: rotate(20deg);
+}
+
+.newsletterContent {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.newsTitle {
+    font-family: var(--font-outfit);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: white;
+}
+
+.newsTitle span {
+    color: #5d5dff;
+}
+
+.newsSubtitle {
+    color: #dfdfdf;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-outfit);
+    letter-spacing: -0.01em;
+}
+
+/* Rounded Input Group */
+.inputGroup {
+    background: white;
+    border-radius: 999px;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    color: #222;
+    outline: none;
+    font-family: var(--font-inter);
+}
+
+.input::placeholder {
+    color: #888;
+}
+
+.subscribeButton {
+    background: #1a1a1a;
+    color: #ff3399;
+    border: none;
+    border-radius: 99px;
+    padding: 1.25rem 3.5rem;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+    font-size: 1.1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s;
+}
+
+.subscribeButton:hover {
+    transform: scale(1.02);
+}
+
+/* QR Section */
+.qrSection {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.qrContainer {
+    background: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.qr {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.scanText {
+    font-family: var(--font-outfit);
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .section {
+        padding: 6rem 0 8rem;
+    }
+
+    .newsletterBox {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6rem 8rem;
+        min-height: 650px;
+    }
+
+    .newsTitle {
+        font-size: 7rem;
+        /* Massive font */
+        margin-bottom: 0.5rem;
+    }
+
+    .newsSubtitle {
+        font-size: 2rem;
+    }
+
+    .qrSection {
+        margin-top: 0;
+        margin-right: 2rem;
+        gap: 2rem;
+    }
+
+    .qrContainer {
+        width: 320px;
+        height: 320px;
+        border-radius: 30px;
+    }
+}
