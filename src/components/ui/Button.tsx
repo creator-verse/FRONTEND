@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './Button.module.css';
+import '../../app/sections.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'outline';
@@ -13,9 +13,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <button
                 ref={ref}
                 className={clsx(
-                    styles.button,
-                    styles[variant],
-                    styles[size],
+                    'btn',
+                    `btn-${variant}`,
+                    `btn-${size}`,
                     className
                 )}
                 {...props}

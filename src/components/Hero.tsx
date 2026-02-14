@@ -4,26 +4,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from './ui/Button';
-import styles from './Hero.module.css';
+import '../app/sections.css';
 
 export default function Hero() {
     return (
-        <section className={styles.section}>
-            <div className={styles.heroCard}>
-                <div className={styles.content}>
+        <section className="hero-section">
+            <div className="hero-card">
+                <div className="hero-content">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className={styles.badge}>
-                            <Calendar size={16} />
+                        <div className="hero-badge">
+                            <Calendar size={18} />
                             <span>May 2nd, 2026 . Enugu, Nigeria</span>
                         </div>
                     </motion.div>
 
                     <motion.h1
-                        className={styles.title}
+                        className="hero-title"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
@@ -32,7 +32,7 @@ export default function Hero() {
                     </motion.h1>
 
                     <motion.p
-                        className={styles.subtitle}
+                        className="hero-subtitle"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -41,71 +41,62 @@ export default function Hero() {
                     </motion.p>
 
                     <motion.div
-                        className={styles.actions}
+                        className="hero-actions"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        <Button variant="primary" size="lg" onClick={() => window.open('#tickets', '_self')}>
+                        <Button variant="primary" size="lg" className="hero-buy-button" onClick={() => window.open('#tickets', '_self')}>
                             Buy Tickets
                         </Button>
 
-                        <a href="#" className={styles.linkButton}>
+                        <a href="#" className="hero-link-button">
                             Join Our Newsletter <ArrowRight size={20} />
                         </a>
                     </motion.div>
                 </div>
 
-                {/* Decorative Shapes (Stickies) */}
-                <div className={styles.shapeContainer}>
-                    {/* Green Sticky (Back) */}
+                {/* Collage Images */}
+                <div className="hero-collage-container">
+                    {/* Pink Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: '#00cc66',
-                            width: '300px',
-                            height: '300px',
-                            top: '10%',
-                            right: '15%',
-                            rotate: -5
-                        }}
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                    />
+                        className="hero-collage-image hero-pink-image"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <img src="/images/imgpink.jpg" alt="Creator" />
+                    </motion.div>
 
-                    {/* Pink Sticky (Middle) */}
+                    {/* Blue Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: 'var(--brand-pink)',
-                            width: '320px',
-                            height: '320px',
-                            top: '30%',
-                            right: '5%',
-                            rotate: 10,
-                            zIndex: 2
-                        }}
-                        animate={{ y: [0, 15, 0] }}
-                        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                    />
+                        className="hero-collage-image hero-blue-image"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                        <img src="/images/imgblue.jpg" alt="Creator" />
+                    </motion.div>
 
-                    {/* Purple Sticky (Front/Bottom) */}
+                    {/* Green Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: 'var(--brand-purple)',
-                            width: '280px',
-                            height: '200px', /* Rectangle */
-                            bottom: '-5%',
-                            right: '25%',
-                            rotate: -5,
-                            zIndex: 3,
-                            filter: 'blur(10px)', /* Slight blur effect in foreground possibly */
-                            opacity: 0.9
-                        }}
-                        animate={{ y: [0, -15, 0] }}
-                        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-                    />
+                        className="hero-collage-image hero-green-image"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
+                        <img src="/images/imggreen.jpg" alt="Creator" />
+                    </motion.div>
+
+                    {/* Red Image */}
+                    <motion.div
+                        className="hero-collage-image hero-red-image"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
+                    >
+                        <img src="/images/imgred.jpg" alt="Creator" />
+                    </motion.div>
                 </div>
             </div>
         </section>

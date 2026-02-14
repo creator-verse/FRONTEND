@@ -1,6 +1,8 @@
+"use client";
+
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
-import styles from './Blog.module.css';
+import '../app/sections.css';
 
 // Updated placeholders matching the vibe
 const posts = [
@@ -32,38 +34,47 @@ const posts = [
 
 export default function Blog() {
     return (
-        <section className={`section-padding ${styles.section}`} id="blog">
-            <div className={styles.container}>
-                <div className={styles.header}>
-                    <h2 className={styles.heading}>Blogs</h2>
-                    <p className={styles.subHeading}>Stories, tips, and real lessons from the creator world.</p>
+        <section className="blog-section" id="blog">
+            <div className="blog-container">
+                {/* Decorative Images */}
+                <Image
+                    src="/images/green-squiggle.png"
+                    alt=""
+                    width={150}
+                    height={80}
+                    className="blog-decoration-squiggle"
+                />
+
+                <div className="blog-header">
+                    <h2 className="blog-heading">Blogs</h2>
+                    <p className="blog-sub-heading">Stories, tips, and real lessons from the creator world.</p>
                 </div>
 
-                <div className={styles.grid}>
+                <div className="blog-grid">
                     {posts.map((p, i) => (
-                        <div key={i} className={styles.card}>
-                            <div className={styles.imageWrapper}>
+                        <div key={i} className="blog-card">
+                            <div className="blog-image-wrapper">
                                 <Image
                                     src={p.image}
                                     alt={p.title}
                                     fill
-                                    className={styles.image}
+                                    className="blog-image"
                                 />
                             </div>
-                            <div className={styles.content}>
-                                <h3 className={styles.title}>{p.title}</h3>
-                                <div className={styles.divider}></div>
-                                <div className={styles.footer}>
-                                    <span className={styles.readArticle}>Read Article</span>
-                                    <ChevronRight size={16} className={styles.icon} />
+                            <div className="blog-content">
+                                <h3 className="blog-title">{p.title}</h3>
+                                <div className="blog-divider"></div>
+                                <div className="blog-footer">
+                                    <span className="blog-read-article">Read Article</span>
+                                    <ChevronRight size={16} className="blog-icon" />
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className={styles.buttonWrapper}>
-                    <button className={styles.seeAllButton}>
+                <div className="blog-button-wrapper">
+                    <button className="blog-see-all-button" onClick={() => window.location.href = '/blog'}>
                         See all Articles <ChevronRight size={16} />
                     </button>
                 </div>

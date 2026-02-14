@@ -2,51 +2,58 @@
 
 import React from 'react';
 import Image from 'next/image';
-import styles from './Speakers.module.css';
+import '../app/sections.css';
 
 export default function Speakers() {
     return (
-        <section className={`section-padding ${styles.section}`} id="speakers">
-            <div className={styles.mainWrapper}>
-                <div className={styles.headerContent}>
-                    <div className={styles.headerText}>
-                        <h2 className={styles.heading}>Speakers</h2>
-                        <p className={styles.textBlock}>
+        <section className="speakers-section" id="speakers">
+            <div className="speakers-main-wrapper">
+                <div className="speakers-header-content">
+                    <div className="speakers-header-text">
+                        <h2 className="speakers-heading">Speakers</h2>
+                        <p className="speakers-text-block">
                             The faces shaping this year&apos;s Creatorverse experience.<br />
                             Four bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
                         </p>
                     </div>
-                    <div className={styles.imageWrapper}>
+                    {/* <div className="speakers-image-wrapper">
                         <Image
                             src="/images/pink-squiggle.png"
                             alt="Decorative Pink Squiggle"
                             width={800}
                             height={400}
-                            className={styles.pinkSquiggle}
+                            className="speakers-pink-squiggle"
                             priority
                         />
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className={styles.speakersContainer}>
+                <div className="speakers-container">
                     {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className={styles.slot}>
+                        <div key={i} className="speakers-slot">
 
                             {/* Silhouette Image */}
-                            <div className={styles.silhouetteWrapper}>
+                            <div className="speakers-silhouette-wrapper">
                                 <Image
                                     src={i % 2 === 0 ? "/images/female-silhouette.png" : "/images/male-silhouette.png"}
                                     alt="Mystery Speaker"
                                     fill
-                                    className={styles.silhouetteImage}
+                                    className="speakers-silhouette-image"
                                 />
                             </div>
                         </div>
                     ))}
 
-                    <div className={styles.overlay}>
-                        <div className={styles.comingSoonText}>COMING SOON...</div>
+                    <div className="speakers-overlay">
+                        <div className="speakers-coming-soon-text">COMING SOON...</div>
                     </div>
+                </div>
+
+                {/* View All Speakers Button */}
+                <div className="speakers-button-wrapper">
+                    <button className="speakers-view-all-button" onClick={() => window.location.href = '/speakers'}>
+                        View All Of Our Speakers
+                    </button>
                 </div>
             </div>
         </section>
