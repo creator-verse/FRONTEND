@@ -118,9 +118,9 @@ export default function Tickets() {
                                 ))}
                             </ul>
 
-                            <button className={`tickets-button tickets-${t.color}-button`}>
+                            <a href="https://selar.com/051b121677" target="_blank" rel="noopener noreferrer" className={`tickets-button tickets-${t.color}-button`}>
                                 Buy Tickets
-                            </button>
+                            </a>
                         </div>
                     ))}
                 </div>

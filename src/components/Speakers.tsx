@@ -13,7 +13,7 @@ export default function Speakers() {
                         <h2 className="speakers-heading">Speakers</h2>
                         <p className="speakers-text-block">
                             The faces shaping this year&apos;s Creatorverse experience.<br />
-                            Four bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
+                            Bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
                         </p>
                     </div>
                     {/* <div className="speakers-image-wrapper">

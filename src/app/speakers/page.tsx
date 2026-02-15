@@ -19,7 +19,7 @@ export default function SpeakersPage() {
                         <h1 className="speakers-page-hero-title">Speakers</h1>
                         <p className="speakers-page-hero-subtitle">
                             Meet the faces shaping this year's Creatorverse experience.<br />
-                            Four bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
+                            Bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
                         </p>
                     </div>
                 </section>

@@ -1331,6 +1331,7 @@
 }
 
 .tickets-button {
+    display: block;
     width: 100%;
     padding: 0.85rem;
     border-radius: 10px;
@@ -1341,6 +1342,8 @@
     color: white;
     cursor: pointer;
     transition: transform 0.2s;
+    text-align: center;
+    text-decoration: none;
 }
 
 .tickets-button:hover {
