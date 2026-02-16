@@ -6,10 +6,10 @@ import Image from 'next/image';
 import '../app/sections.css';
 
 const faqs = [
-    { question: "What is the Creatorverse?", answer: "Creatorverse is the ultimate gathering of creators, brands, and innovators to shape the future of the digital economy." },
-    { question: "What is the schedule for Creatorverse?", answer: "The event lasts for a day, May 02, featuring keynotes, panels, extensive break-out sessions, and networking mixers." },
-    { question: "How do I purchase tickets for Creatorverse?", answer: "You can get your ticket directly from this website in the Tickets section above. Early bird pricing is available for a limited time!" },
-    { question: "How many speakers are coming for Creatorverse?", answer: "We have over 20 industry leaders confirmed, with more surprise guests to be announced closer to the date." },
+    { question: "Who is Creatorverse for?", answer: "You. Come as you are. If you're interested in the creative sector of South-East Nigeria, enjoy creating content, or have ideas running through, you're more than welcome." },
+    { question: "Where Will Creatorverse take place?", answer: "DeBase Landmark, Enugu." },
+    { question: "When will Creatorverse take place?", answer: "Everything we have stored up will be unraveled on the 2nd of May, 2026." },
+    { question: "How do I register for Creatorverse?", answer: <span><em>Here</em>. Click the link in the ticket section, and save your seat. Once properly registered, you will receive detailed event information and updates via email.</span> },
 ];
 
 export default function FAQ() {
