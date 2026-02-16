@@ -11,8 +11,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Creatorverse 2026 | Creating The Future Of The Creator Economy",
-  description: "Join 500+ creators, investors, and brands in Enugu for Creatorverse 2026. The premier event for the creator economy.",
+  title: "Creatorverse 2026 | Shaping The Future Of The Creator Economy",
+  description: "Join 1000+ creators, investors, and brands in Enugu for Creatorverse 2026. The premier event for the creator economy.",
   keywords: ["Creatorverse", "Creator Economy", "Enugu", "Nigeria", "Conference", "Tech"],
 };
 
