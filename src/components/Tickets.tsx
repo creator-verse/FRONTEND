@@ -8,9 +8,9 @@ const tickets = [
     {
         type: 'STUDENT TICKET',
         price: '₦6,000',
-        originalPrice: '₦3,500',
-        subtext: 'Early bird category: Ideal for students',
+        subtext: 'Ideal for students',
         color: 'pink',
+        link: 'https://selar.com/051b121677',
         features: [
             'Full access to event',
             'Welcome creator kit',
@@ -25,6 +25,7 @@ const tickets = [
         price: '₦12,000',
         subtext: 'Open to everyone - creators ready to level up',
         color: 'blue',
+        link: 'https://selar.com/06374c4750',
         features: [
             'Full access to event',
             'Welcome creator kit',
@@ -42,6 +43,7 @@ const tickets = [
         price: '₦25,000',
         subtext: 'Best for founders and brand builders',
         color: 'green',
+        link: 'https://selar.com/854w7727g5',
         features: [
             'Full access to event',
             'Welcome creator kit',
@@ -60,6 +62,7 @@ const tickets = [
         price: '₦40,000',
         subtext: 'Best for industry leaders and premium guests',
         color: 'red',
+        link: 'https://selar.com/77l73i7d7a',
         features: [
             'Full access to event',
             'Welcome creator kit',
@@ -95,12 +98,7 @@ export default function Tickets() {
                                 <div className="tickets-header-top">
                                     <div className="tickets-card-title">{t.type}</div>
                                     <div className="tickets-price">
-                                        {t.originalPrice && (
-                                            <span style={{ textDecoration: 'line-through', opacity: 0.6, marginRight: '8px', fontSize: '0.9em' }}>
-                                                {t.price}
-                                            </span>
-                                        )}
-                                        {t.originalPrice ? t.originalPrice : t.price}
+                                        {t.price}
                                     </div>
                                 </div>
                                 <p className="tickets-card-subtext">{t.subtext}</p>
@@ -118,7 +116,7 @@ export default function Tickets() {
                                 ))}
                             </ul>
 
-                            <a href="https://selar.com/051b121677" target="_blank" rel="noopener noreferrer" className={`tickets-button tickets-${t.color}-button`}>
+                            <a href={t.link} target="_blank" rel="noopener noreferrer" className={`tickets-button tickets-${t.color}-button`}>
                                 Buy Tickets
                             </a>
                         </div>
