@@ -15,16 +15,21 @@
 }
 
 .speakers-page-hero-container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .speakers-page-hero-title {
     font-family: var(--font-plus-jakarta);
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #1A1A1A;
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .speakers-page-hero-subtitle {
@@ -32,145 +37,176 @@
     font-size: 15px;
     color: #666;
     line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Speakers Grid Section */
+/* Overlay Blobs */
 .speakers-page-grid-section {
     background: #F2F2F0;
     padding: 2rem 1rem 4rem;
+    position: relative;
+    overflow: hidden; /* Prevent blobs from causing horizontal scroll */
 }
 
+.blob-bg {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.6;
+}
+.blob-1 { top: 10%; left: -2%; }
+.blob-2 { top: 40%; right: -5%; }
+.blob-3 { bottom: 10%; left: 30%; }
+
 .speakers-page-grid-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
+    z-index: 10; /* Above blobs */
 }
 
 .speakers-page-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    background: transparent;
-    border-radius: 32px;
-    overflow: hidden;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.speakers-page-card {
-    position: relative;
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    border-radius: 24px;
+/* Card Styling */
+.speakers-card-container {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: start; /* So cards don't stretch vertically in grid rows */
 }
 
-.speakers-page-card:nth-child(4n+1) {
-    background: #4a4d6e;
+.speakers-card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.speakers-page-card:nth-child(4n+2) {
-    background: #6d4a5d;
+.speakers-card-inner {
+    display: flex;
+    flex-direction: column;
 }
 
-.speakers-page-card:nth-child(4n+3) {
-    background: #4a5d52;
-}
-
-.speakers-page-card:nth-child(4n+4) {
-    background: #5d4a4e;
-}
-
-.speakers-page-card-image {
+.speakers-card-image-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1; /* Square on mobile usually, maybe slightly taller on desktop */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #2a2a2a; /* Fallback for transparency */
 }
 
-.speakers-page-silhouette {
-    object-fit: contain;
-    object-position: bottom center;
-    opacity: 0.6;
+.speakers-card-image {
+    transition: transform 0.5s ease;
 }
 
-.speakers-page-overlay {
+.speakers-card-container:hover .speakers-card-image {
+    transform: scale(1.05);
+}
+
+.speakers-card-icon {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
-    z-index: 10;
+    padding: 4px;
 }
 
-.speakers-page-coming-soon {
-    font-family: var(--font-plus-jakarta);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.speakers-card-name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 10px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
     text-align: center;
-    padding: 0 1rem;
+    z-index: 2;
+}
+
+.speakers-name {
+    color: white;
+    font-family: var(--font-plus-jakarta);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.speakers-card-footer {
+    padding: 16px 0 8px;
+    text-align: center;
+}
+
+.speakers-card-role {
+    font-family: var(--font-plus-jakarta);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role-pink { color: #ff477e; }
+.role-purple { color: #8338ec; }
+.role-green { color: #06d6a0; }
+
+.speakers-card-bio {
+    padding: 0 10px 10px;
+    font-family: var(--font-plus-jakarta);
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    animation: fadeInDown 0.3s ease forwards;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 8px;
+    padding-top: 15px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Tablet */
-@media (min-width: 768px) {
-    .speakers-page-hero {
-        padding: 5rem 2rem 3rem;
-    }
-
+@media (min-width: 640px) {
     .speakers-page-hero-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
-
-    .speakers-page-hero-subtitle {
-        font-size: 16px;
-    }
-
     .speakers-page-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
-
-    .speakers-page-card {
-        border-radius: 28px;
-    }
-
-    .speakers-page-coming-soon {
-        font-size: 2.5rem;
+    /* Let's make it 4/5 aspect ratio to reflect original design better */
+    .speakers-card-image-wrapper {
+        aspect-ratio: 4/5;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
     .speakers-page-hero {
-        padding: 6rem 2rem 4rem;
+        padding: 5rem 2rem 3rem;
     }
 
     .speakers-page-hero-title {
         font-size: 4.5rem;
     }
 
-    .speakers-page-hero-subtitle {
-        font-size: 17px;
-    }
-
-    .speakers-page-grid-container {
-        max-width: 1100px;
-    }
-
     .speakers-page-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-    }
-
-    .speakers-page-card {
-        border-radius: 32px;
-    }
-
-    .speakers-page-coming-soon {
-        font-size: 3.5rem;
-        letter-spacing: 0.12em;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
