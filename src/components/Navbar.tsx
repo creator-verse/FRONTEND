@@ -7,11 +7,12 @@ import { Button } from './ui/Button';
 import '../app/sections.css';
 
 const navLinks = [
-    { name: 'Schedule', href: '/schedule' },
     { name: 'Speakers', href: '/speakers' },
+    { name: 'Schedule', href: '/schedule' },
     { name: 'Tickets', href: '/#tickets' },
+    { name: 'Teams', href: '/team' },
+    { name: 'FAQ\'s', href: '/faq' },
     { name: 'Blog', href: '/blog' },
-    { name: 'FAQ', href: '/faq' },
 ];
 
 export default function Navbar() {

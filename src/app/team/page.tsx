@@ -1,0 +1,102 @@
+"use client";
+
+import React from 'react';
+import Image from 'next/image';
+import { Facebook, Youtube, Linkedin, Twitter } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Newsletter from '@/components/Newsletter';
+import Footer from '@/components/Footer';
+import '../team-page.css';
+
+const teamMembers = [
+    {
+        name: "Goshen Mmoneke",
+        role: "Convener",
+        image: "/images/sp1.png", // Using existing image as placeholder
+        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+    },
+    {
+        name: "Anosike Mmerichukwu",
+        role: "Website Developer",
+        image: "/images/tm1.png",
+        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+    },
+    {
+        name: "Chukwu Elvis",
+        role: "SALES MANAGER",
+        image: "/images/imgblue.jpg",
+        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+    },
+    {
+        name: "Chukwu Elvis",
+        role: "SALES MANAGER",
+        image: "/images/imgblue.jpg",
+        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+    }
+];
+
+export default function TeamPage() {
+    return (
+        <div className="team-page-wrapper">
+            <Navbar />
+
+            <main className="team-page-main">
+                {/* Decorative Background Elements */}
+                {/* Reusing some existing blobs from the public/images folder */}
+                <Image src="/images/pink-squiggle.png" alt="Decor" width={300} height={300} className="team-blob team-blob-1" />
+                <Image src="/images/green-squiggle.png" alt="Decor" width={250} height={250} className="team-blob team-blob-2" />
+                <Image src="/images/pink-squiggle.png" alt="Decor" width={280} height={280} className="team-blob team-blob-3" />
+
+                <div className="team-header">
+                    <h1 className="team-heading">
+                        Meet the <span className="team-heading-accent">Team</span>
+                    </h1>
+                </div>
+
+                <div className="team-grid-container">
+                    <div className="team-grid">
+                        {teamMembers.map((member, idx) => (
+                            <div key={idx} className="team-card">
+                                <div className="team-image-container">
+                                    <Image 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        fill 
+                                        className="team-image"
+                                    />
+                                </div>
+                                <div className="team-role">{member.role}</div>
+                                <div className="team-name">{member.name}</div>
+                                <div className="team-bio">{member.bio}</div>
+                                
+                                <div className="team-socials">
+                                    <a href="#" className="team-social-icon" aria-label="Facebook">
+                                        <Facebook size={16} />
+                                    </a>
+                                    <a href="#" className="team-social-icon" aria-label="YouTube">
+                                        <Youtube size={16} />
+                                    </a>
+                                    <a href="#" className="team-social-icon" aria-label="LinkedIn">
+                                        <Linkedin size={16} />
+                                    </a>
+                                    <a href="#" className="team-social-icon" aria-label="Twitter">
+                                        <Twitter size={16} />
+                                    </a>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="team-load-more-wrapper">
+                        <button className="team-load-more-btn">
+                            Load More Teams {'>'}
+                        </button>
+                    </div>
+                </div>
+            </main>
+
+            <Newsletter />
+            <Footer />
+        </div>
+    );
+}
