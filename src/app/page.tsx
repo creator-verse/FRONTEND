@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import SponsorCarousel from "@/components/SponsorCarousel";
 import WhyCreatorverse from "@/components/WhyCreatorverse";
 import WhoIsCreatorverse from "@/components/WhoIsCreatorverse";
 import Speakers from "@/components/Speakers";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <SponsorCarousel />
       <WhyCreatorverse />
       <WhoIsCreatorverse />
       <Speakers />

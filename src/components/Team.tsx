@@ -5,12 +5,17 @@ import Image from 'next/image';
 import styles from './Team.module.css';
 
 const teamMembers = [
-  { name: "Goshen Mmoneke", role: "Convener", image: "/images/sp1.png" },
+  { name: "Goshen Mmoneke", role: "Convener", image: "/images/tm0.jpg" },
   { name: "Anosike Mmerichukwu", role: "Website Developer", image: "/images/tm1.png" },
-  { name: "Chukwu Elvis", role: "Founder", image: "/images/sp1.png" },
-  { name: "Chukwu Elvis", role: "Founder", image: "/images/sp1.png" },
-  { name: "Chukwu Elvis", role: "Founder", image: "/images/sp1.png" },
-  { name: "Chukwu Elvis", role: "Founder", image: "/images/sp1.png" },
+  { name: "Asadu Chukwuamaka", role: "Lead, Mobilization Team", image: "/images/tm2.jpg" },
+  { name: "Princess Chimdindu Obini", role: "Lead, Partnerships & Sponsorships", image: "/images/tm3.png" },
+  { name: "Isreal Aluko", role: "Lead, Web Development Team", image: "/images/tm4.jpg" },
+  { name: "Chimdalu Adibe", role: "Lead,content creation team", image: "/images/tm7.png" },
+  { name: "Jordan Ebong", role: "Speakers Management Lead", image: "/images/tm5.jpg" },
+  { name: "Okolie Ogechukwu Blossom", role: "Project manager_Logistics lead", image: "/images/tm8.jpg" },
+  { name: "Obasi Favour Ngozi", role: "Social Media Team Lead", image: "/images/tm9.jpg" },
+  { name: "Chidimma Itam", role: "Community Management Lead", image: "/images/tm10.png" },
+  { name: "Nwokolo Amarachukwu", role: "Asst Lead Speaker Mgt and Mobilization", image: "/images/tm6.png" },
 ];
 
 export default function Team() {

@@ -12,27 +12,69 @@ const teamMembers = [
     {
         name: "Goshen Mmoneke",
         role: "Convener",
-        image: "/images/sp1.png", // Using existing image as placeholder
-        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+        image: "/images/tm0.jpg", 
+        bio: "More Info Coming Soon"
     },
     {
         name: "Anosike Mmerichukwu",
         role: "Website Developer",
         image: "/images/tm1.png",
-        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+        bio: "More Info Coming Soon"
     },
     {
-        name: "Chukwu Elvis",
-        role: "SALES MANAGER",
-        image: "/images/imgblue.jpg",
-        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
+        name: "Asadu Chukwuamaka",
+        role: "Lead, Mobilization Team",
+        image: "/images/tm2.jpg",
+        bio: "More Info Coming Soon"
     },
     {
-        name: "Chukwu Elvis",
-        role: "SALES MANAGER",
-        image: "/images/imgblue.jpg",
-        bio: "Lorem ipsum dolor sit amet consectetur. At quis augue morbi hendrerit. Leo sagittis nullam sed eget sapien ullamcorper purus. Ullamcorper sed a elementum pellentesque nec lectus ut tincidunt. A porttitor malesuada bibendum eu volutpat gravida commodo viverra. Amet enim at turpis massa sit in ultrices neque blandit."
-    }
+        name: "Princess Chimdindu Obini",
+        role: "Lead, Partnerships & Sponsorships",
+        image: "/images/tm3.png",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Isreal Aluko",
+        role: "Lead, Web Development Team",
+        image: "/images/tm4.jpg",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Chimdalu Adibe",
+        role: "Lead,content creation team",
+        image: "/images/tm7.png",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Jordan Ebong",
+        role: "Speakers Management Lead",
+        image: "/images/tm5.jpg",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Okolie Ogechukwu Blossom",
+        role: "Project manager_Logistics lead",
+        image: "/images/tm8.jpg",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Obasi Favour Ngozi",
+        role: "Social Media Team Lead",
+        image: "/images/tm9.jpg",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Chidimma Itam",
+        role: "Community Management Lead",
+        image: "/images/tm10.png",
+        bio: "More Info Coming Soon"
+    },
+    {
+        name: "Nwokolo Amarachukwu",
+        role: "Asst Lead Speaker Mgt and Mobilization",
+        image: "/images/tm6.png",
+        bio: "More Info Coming Soon"
+    },
 ];
 
 export default function TeamPage() {
