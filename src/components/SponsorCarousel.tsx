@@ -3,11 +3,13 @@ import styles from './SponsorCarousel.module.css';
 
 const logos = [
   '/images/LOGOS/SELAR.png',
-  '/images/LOGOS/Fictional company logo.png',
   '/images/LOGOS/SELAR.png',
-  '/images/LOGOS/Fictional company logo.png',
   '/images/LOGOS/SELAR.png',
-  '/images/LOGOS/Fictional company logo.png',
+  '/images/LOGOS/SELAR.png',
+  '/images/LOGOS/SELAR.png',
+  '/images/LOGOS/SELAR.png',
+  '/images/LOGOS/SELAR.png',
+  '/images/LOGOS/SELAR.png',
 ];
 
 export default function SponsorCarousel() {
